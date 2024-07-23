@@ -1,0 +1,118 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: radial-gradient(circle at 85% 25%, rgba(135, 206, 250, 0.4), transparent 40%), radial-gradient(circle at 88% 35%, rgba(255, 215, 0, 0.4), transparent 40%), /* Light yellow */
+    radial-gradient(circle at 90% 45%, rgba(147, 112, 219, 0.4), transparent 40%), /* Purple */
+    radial-gradient(circle at 87% 55%, rgba(0, 191, 255, 0.4), transparent 40%), radial-gradient(circle at 85% 65%, rgba(135, 206, 250, 0.4), transparent 40%), radial-gradient(circle at 90% 75%, rgba(255, 215, 0, 0.4), transparent 40%), /* Light yellow */
+    radial-gradient(circle at 90% 85%, rgba(147, 112, 219, 0.6), transparent 50%), /* More Purple */
+    radial-gradient(circle at 88% 95%, rgba(147, 112, 219, 0.6), transparent 50%), /* More Purple */
+    white;
+    height: 100vh;
+    margin: 0;
+}
+
+.form-container {
+    text-align: center;
+    padding: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+h1 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.highlight {
+    color: green;
+}
+
+p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+    .input-group input {
+        width: 90%;
+        padding: 0.5rem 2rem 0.5rem 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .input-group .icon {
+        position: absolute;
+        right: 0.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #666;
+    }
+
+button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+.social-login {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+    .social-login button {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        margin: 0 0.5rem;
+        font-size: 1.5rem;
+    }
+
+.google-btn {
+    color: #db4437;
+}
+
+.apple-btn {
+    color: black;
+}
+
+.facebook-btn {
+    color: #3b5998;
+}
+
+.social-login button:hover {
+    opacity: 0.8;
+}
+
+.error{
+    color:red;
+}
+

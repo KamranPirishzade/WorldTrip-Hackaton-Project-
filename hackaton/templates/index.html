@@ -1,0 +1,21 @@
+﻿{% extends "base.html" %}
+
+{% block title %}Home - WorldTrip{% endblock %}
+
+{% block content %}
+<body>
+    <div class="home-section">
+        <h1 class="yazi-1">
+            Embark on the Ultimate Adventure with WorldTrip:<br />
+
+            Your Ticket to a <span id="yasil">Global Journey!</span>
+        </h1>
+        <p id="yazi-2">Effortlessly orchestrate travel plans with our intuitive platform for an expeditious and hassle-free experience.</p>
+        {% if username%}
+         <a href="{{ url_for('user_home',username=session.username)}}"><button class="button-22">Explore →</button></a>
+        {%else%}
+         <a href="{{ url_for('user_home',username='guest')}}"> <button class="button-22">Explore →</button></a>
+        {%endif%}
+    </div>
+</body>
+{% endblock %}

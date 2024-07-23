@@ -1,0 +1,26 @@
+﻿{% extends "base.html" %}
+
+{% block title %}Home - WorldTrip{% endblock %}
+
+{% block content %}
+<body>
+
+    <div class="about-section">
+        <h1>About Us</h1>
+        <p>WorldTrip is your ultimate travel companion, offering intuitive and hassle-free travel planning solutions. Our mission is to help travelers effortlessly orchestrate their travel plans, ensuring a seamless and enjoyable experience from start to finish.</p>
+        <h2>Our Vision</h2>
+        <p>We aim to revolutionize the travel industry by providing a platform that simplifies travel planning, making it accessible and convenient for everyone. Whether you are an adventure seeker, a family vacationer, or a business traveler, WorldTrip is here to cater to all your travel needs.</p>
+        <h2>Our Team</h2>
+        <p>Our team comprises passionate travelers and tech enthusiasts who are dedicated to bringing you the best travel experiences. We are constantly innovating and improving our platform to meet the ever-changing needs of our users.</p>
+    </div>
+
+    <script>
+        document.getElementById('login-btn').addEventListener('click', function () {
+            window.location.href = '/login';
+        });
+
+        document.getElementById('signup-btn').addEventListener('click', function () {
+            window.location.href = '/signup';
+        });</script>
+</body>
+{% endblock %}

@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styless_home.css') }}">
+
+</head>
+<body>
+    <div class="all-section">
+        {% if not username=='guest' %}
+        <h1>
+            Good morning, <span id="david">{{username.title()}}</span>.
+        </h1>
+        <span id="s1">Let's organize the best travel for your vacation!</span>
+        <div class="personal">
+            <div>
+                <span id="personal">{{username.title()}}</span>
+                <p></p>
+            </div>
+            <img id="img-david"
+                 src="https://file.xunruicms.com/admin_html/assets/pages/media/profile/profile_user.jpg"
+                 alt="david" />
+            <i class="menu fa-solid fa-bars"></i>
+        </div>
+        {% else %}
+
+        {% if not username or username=='guest' %}
+        <div class="btns">
+            <a href="{{ url_for('login') }}" class="button-6">Log in</a>
+            <a href="{{ url_for('signup') }}" class="button-6">Sign up</a>
+        </div>
+        {% endif %}
+        
+        {%endif%}
+
+       
+
+        <div class="icon-container">
+            <div class="icon-box">
+                <img src="https://www.libertytravel.com/sites/default/files/styles/full_size/public/flight-hero.jpg?itok=LKyRwKDq" alt="Air Experts: Flights and Airline Tickets | Liberty Travel" />" alt="Flights" />
+                <div class="overlay">Flights</div>
+            </div>
+            <div class="icon-box">
+                <img src="https://hips.hearstapps.com/hmg-prod/images/honda-accord-2-0t-1533128356.png?crop" />
+                <div class="overlay">Car</div>
+            </div>
+            <div class="icon-box">
+                <img src="https://www.carnival.com/-/media/images/ships/carnival-luminosa-open-for-sale-hero-mobile.jpg" alt="Cruise" />
+                <div class="overlay">Cruise</div>
+            </div>
+            <div class="icon-box">
+                <img src="https://www.railway-technology.com/wp-content/uploads/sites/13/2023/02/Image-1-Amtraks-Airo-Passenger-Train.jpeg" alt="Train" />
+                <div class="overlay">Train</div>
+            </div>
+            <img id="kalendar"
+                 src="https://m.media-amazon.com/images/I/61OsaOwm6VL.jpg"
+                 alt="sekil" />
+        </div>
+        <div class="flags">
+            <button class="button-38">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Flag_of_Azerbaijan.svg/640px-Flag_of_Azerbaijan.svg.png" alt="aze" />
+                Azerbaijan
+            </button>
+            <button class="button-38">
+                <img src="https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg" alt="italy" />
+                Italy
+            </button>
+            <button class="button-38">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc0G8aE5AoGDOQMJGd8fcrO5rZOWWvrAVKUw&s" alt="turkey" />
+                Turkiye
+            </button>
+            <button class="button-38">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Flag_of_the_United_States_%28DoS_ECA_Color_Standard%29.svg" alt="usa" />
+                USA
+            </button>
+            <button class="button-38">
+                <img src="https://cdn.britannica.com/82/682-050-8AA3D6A6/Flag-France.jpg" alt="france" />
+                France
+            </button>
+            <button class="button-38">
+                <img src="https://cdn.britannica.com/36/4336-050-056AC114/Flag-Spain.jpg" alt="spain" />
+                Spain
+            </button>
+            <button class="button-38">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/640px-Flag_of_Brazil.svg.png" alt="brazil" />
+                Brazil
+            </button>
+        </div>
+        <div class="sidebar">
+            <i class="fa-regular fa-calendar-days"></i>
+            <a href="/"><i class="fa-solid fa-house"></i></a>
+            <a href="/ai_planner"><i class="fa-solid fa-circle-plus"></i></a>
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-ticket"></i>
+        </div>
+        <h1 id="yalniz">Discover Hidden Gems</h1>
+        <div class="container">
+            <div class="hidden-gems">
+                <div class="gem">
+                    <div class="info-container">
+                        <h2>
+                            A Perfect <span class="highlight">Beach Escape</span>
+                        </h2>
+                        <p>
+                            Escape to Spain's captivating coasts, where turquoise waters kiss
+                            golden shores. Discover your dream vacation in Spain's coastal
+                            haven.
+                        </p>
+                        <button class="button-22" role="button">
+                            See Plan <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    <img src="https://www.lelongweekend.com/wp-content/uploads/2019/09/Depositphotos_13262966_xl-2015-scaled.jpg" alt="A Perfect Beach Escape" />
+                </div>
+                <div class="gem">
+                    <img src="https://www.endlessbeginnings.com/alsace-lorraine-cruising/index_files/slideshowImage-2646.jpg" alt="Evenings in Alsace" />
+                    <div class="info-container">
+                        <h2>
+                            Evenings in <span class="highlight">Alsace</span>
+                        </h2>
+                        <p>
+                            Colmar offers an unforgettable journey filled with history,
+                            romance, and enchantment. Your dream adventure awaits!
+                        </p>
+                        <button class="button-22" role="button">
+                            See Plan <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="gem">
+                    <div class="info-container">
+                        <h2>
+                            Istanbul's <span class="highlight">Coastal Jewel</span>
+                        </h2>
+                        <p>
+                            Our planner guides you through the neighborhood for an
+                            unforgettable adventure to Arnavutköy, Turkiye.
+                        </p>
+                        <button class="button-22" role="button">
+                            See Plan <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    <img src="https://kultur.istanbul/gorsel/2021/10/arnavutkoy-istanbul-bebek.jpg" alt="Istanbul's Coastal Jewel" />
+                </div>
+            </div>
+            <div class="friends">
+                <hr />
+                <p>Friends</p>
+                <div id="spanlar">
+                    <img id="friends-img"
+                         src="https://img.freepik.com/premium-photo/happy-man-ai-generated-portrait-user-profile_1119669-1.jpg"
+                         alt="John Septimus" />
+                    <span>John Septimus</span>
+                </div>
+                <br />
+                <div id="spanlar">
+                    <img id="friends-img"
+                         src="https://www.venmond.com/demo/vendroid/img/avatar/big.jpg"
+                         alt="Emery Dotte" />
+                    <span>Emery Dotte</span>
+                </div>
+                <hr />
+                <p>You may also know</p>
+                <div id="spanlar">
+                    <img id="friends-img"
+                         src="https://pixinvent.com/materialize-material-design-admin-template/app-assets/images/user/12.jpg"
+                         alt="Erin Carder" />
+                    <span>Erin Carder</span>
+                </div>
+                <br />
+                <div id="spanlar">
+                    <img id="friends-img"
+                         src="https://pixinvent.com/materialize-material-design-admin-template/app-assets/images/avatar/avatar-1.png"
+                         alt="Kaiya Norm" />
+                    <span>Kaiya Norm</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

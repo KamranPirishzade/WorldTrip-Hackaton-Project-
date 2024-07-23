@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}WorldTrip{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header class="nav">
+        <a href="/"><div class="icon">World<span id="trip">Trip</span></div></a>
+        <div class="links">
+            <a href="/about">About us</a>
+            <a href="/help_center">Help Center</a>
+            <a href="#">Premium</a>
+            <a href="#">EN</a>
+        </div>
+
+        {% if not username %}
+        <div class="btns">
+            <a href="{{ url_for('login') }}" class="button-6">Log in</a>
+            <a href="{{ url_for('signup') }}" class="button-6">Sign up</a>
+        </div>
+        {% else %}
+        <div class="btns">
+            <a href="{{ url_for('logout') }}" class="button-6">Log out</a>
+        </div>
+        {% endif %}
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <script>
+        document.getElementById('login-btn').addEventListener('click', function () {
+            window.location.href = '/login';
+        });
+
+        document.getElementById('signup-btn').addEventListener('click', function () {
+            window.location.href = '/signup';
+        });
+
+        document.getElementById('generate-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const prompt = document.getElementById('prompt').value;
+            fetch('/generate', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: new URLSearchParams({
+                    'prompt': prompt
+                })
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.error) {
+                        alert(data.error);
+                    } else {
+                        document.getElementById('generated-text').innerText = data.text;
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+        });
+
+    </script>
+
+</body>
+</html>

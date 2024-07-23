@@ -1,0 +1,178 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.greeting-section {
+    margin-bottom: 30px;
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 10px;
+}
+
+.greeting-section h1 {
+    font-size: 2.5em;
+    color: #4CAF50;
+}
+
+.intro-text {
+    color: #666;
+    font-size: 1.2em;
+}
+
+.planner-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.form-group {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px;
+    text-align: left;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: bold;
+}
+
+.form-input,
+.form-select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.gems-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.gem-card {
+    background-color: #fff;
+    width: 100%;
+    max-width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+    .gem-card img {
+        width: 100%;
+        height: auto;
+        border-bottom: 1px solid #eee;
+    }
+
+.gem-title {
+    font-size: 1.5em;
+    color: #333;
+    margin: 20px 0 10px 0;
+}
+
+.gem-description {
+    color: #666;
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+.gem-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+}
+
+    .gem-button:hover {
+        background-color: #45a049;
+    }
+
+.gem-card:hover {
+    transform: translateY(-10px);
+}
+
+#ai-submit {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+    #ai-submit:hover {
+        background-color: #45a049;
+    }
+
+
+.sidebar {
+    position: fixed;
+    top: 230px;
+    left: 0;
+    border-radius: 0px 10px 10px 0px;
+    width: 50px;
+    height: 350px;
+    background-color: #4cdc49;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+    .sidebar i {
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+        color: black;
+        text-decoration: none;
+    }
+
+    .sidebar a:hover {
+        background-color: #008c4a;
+    }
+
+    .sidebar a img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .sidebar a .icon {
+        margin: 10px 0;
+    }

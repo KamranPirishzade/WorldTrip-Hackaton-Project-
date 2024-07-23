@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Get <span class="highlight">started</span></h1>
+        <p>A great travel starts with a great profile!</p>
+        <form action="/signup" method="POST">
+            <div class="input-group">
+                <input type="text" id="first_name" name="first_name" placeholder="First name" required>
+                <span class="icon"><i class="fas fa-user"></i></span>
+            </div>
+            <div class="input-group">
+                <input type="text" id="last_name" name="last_name" placeholder="Last name" required>
+                <span class="icon"><i class="fas fa-user"></i></span>
+            </div>
+            <div class="input-group">
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <span class="icon"><i class="fas fa-envelope"></i></span>
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" name="password" placeholder="Password" required>
+                <span class="icon"><i class="fas fa-lock"></i></span>
+            </div>
+            <button type="submit">Sign up</button>
+        </form>
+        <p>Already have an account? <a href="/login">Log in</a></p>
+        <div class="social-login">
+            <button class="google-btn"><i class="fab fa-google"></i></button>
+            <button class="apple-btn"><i class="fab fa-apple"></i></button>
+            <button class="facebook-btn"><i class="fab fa-facebook-f"></i></button>
+        </div>
+    </div>
+</body>
+</html>
